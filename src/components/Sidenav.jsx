@@ -12,9 +12,12 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "../appStore";
+import AnalyticsIcon from '@mui/icons-material/Analytics';
+import GroupIcon from '@mui/icons-material/Group';
+import HomeIcon from '@mui/icons-material/Home';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 const drawerWidth = 240;
 
@@ -105,7 +108,7 @@ export default function MiniDrawer() {
                                     justifyContent: "center",
                                 }}
                             >
-                                <InboxIcon />
+                                <HomeIcon />
                             </ListItemIcon>
                             <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
@@ -126,9 +129,30 @@ export default function MiniDrawer() {
                                     justifyContent: "center",
                                 }}
                             >
-                                <InboxIcon />
+                                <GroupIcon />
                             </ListItemIcon>
-                            <ListItemText primary="About" sx={{ opacity: open ? 1 : 0 }} />
+                            <ListItemText primary="Users" sx={{ opacity: open ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+
+                    <ListItem  disablePadding sx={{ display: "block" }} onClick={()=>{navigate("/analytics")}}>
+                        <ListItemButton
+                            sx={{
+                                minHeight: 48,
+                                justifyContent: open ? "initial" : "center",
+                                px: 2.5,
+                            }}
+                        >
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: open ? 3 : "auto",
+                                    justifyContent: "center",
+                                }}
+                            >
+                                <AnalyticsIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Analytics" sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
 
@@ -147,7 +171,7 @@ export default function MiniDrawer() {
                                     justifyContent: "center",
                                 }}
                             >
-                                <InboxIcon />
+                                <SettingsIcon />
                             </ListItemIcon>
                             <ListItemText primary="Settings" sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
