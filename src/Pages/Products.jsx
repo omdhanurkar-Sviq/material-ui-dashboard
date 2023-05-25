@@ -2,20 +2,22 @@ import React from "react";
 import SideNav from "../components/Sidenav";
 import { Box } from "@mui/material";
 import Navbar from "../components/Navbar";
-const About = () => {
+import ProductList from "./products/ProductList";
+
+const Product = () => {
   return (
-    <>
+    <div className="bgcolor">
       <Navbar />
-      <Box height={30}/>
+      <Box height={70}/>
       <Box sx={{ display: "flex" }}>
         <SideNav />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-          <h1>About</h1>
+          <ProductList/>
 
         </Box>
       </Box>
-    </>
+    </div>
   );
 };
 
-export default About;
+export default Product;

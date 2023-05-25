@@ -4,6 +4,7 @@ import { Box, Card, CardContent, Grid, Stack, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import { GeoChart } from "../charts/GeoChart";
 import PieChart from "../charts/PieChart"
+import CountUp from 'react-countup';
 
 import HbarChart from "../charts/HbarChart";
 const Analytics = () => {
@@ -37,7 +38,7 @@ const Analytics = () => {
                                                     component="div"
                                                     sx={{ color: "#ffffff" }}
                                                 >
-                                                    24,630
+                                                    <CountUp delay={0.2} end={22000} duration={0.3} />
                                                 </Typography>
                                                 <Typography
                                                     gutterBottom
@@ -70,7 +71,8 @@ const Analytics = () => {
                                                     component="div"
                                                     sx={{ color: "#ffffff", padding: "7px 0px" }}
                                                 >
-                                                    24,630
+                                                    <CountUp delay={0.2} end={22000} duration={0.3} />
+
                                                 </Typography>
                                                 <Typography
                                                     gutterBottom
@@ -101,7 +103,8 @@ const Analytics = () => {
                                                     component="div"
                                                     sx={{ color: "#ffffff" }}
                                                 >
-                                                    24,630
+                                                    <CountUp delay={0.2} end={22000} duration={0.3} />
+
                                                 </Typography>
                                                 <Typography
                                                     gutterBottom
@@ -133,7 +136,8 @@ const Analytics = () => {
                                                     component="div"
                                                     sx={{ color: "#ffffff" }}
                                                 >
-                                                    24,630
+                                                    <CountUp delay={0.2} end={22000} duration={0.3} />
+
                                                 </Typography>
                                                 <Typography
                                                     gutterBottom
@@ -152,7 +156,7 @@ const Analytics = () => {
                             <Grid item xs={7}>
                                 <Card sx={{ height: 40 + "vh" }}>
                                     <CardContent>
-                                        <HbarChart/>
+                                        <HbarChart />
                                     </CardContent>
                                 </Card>
                             </Grid>

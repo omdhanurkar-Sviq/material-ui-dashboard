@@ -114,7 +114,7 @@ export default function MiniDrawer() {
                         </ListItemButton>
                     </ListItem>
 
-                    <ListItem  disablePadding sx={{ display: "block" }} onClick={()=>{navigate("/about")}}>
+                    <ListItem  disablePadding sx={{ display: "block" }} onClick={()=>{navigate("/products")}}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -131,7 +131,7 @@ export default function MiniDrawer() {
                             >
                                 <GroupIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Users" sx={{ opacity: open ? 1 : 0 }} />
+                            <ListItemText primary="Products" sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
 

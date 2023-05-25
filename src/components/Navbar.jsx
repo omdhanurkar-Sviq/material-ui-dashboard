@@ -184,7 +184,7 @@ export default function Navbar() {
                         component="div"
                         sx={{ display: { xs: "none", sm: "block" } }}
                     >
-                        MUI
+                        SVIQ
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
