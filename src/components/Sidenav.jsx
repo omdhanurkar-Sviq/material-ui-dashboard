@@ -14,6 +14,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { useNavigate } from "react-router-dom";
+import { useAppStore } from "../appStore";
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -66,17 +68,19 @@ const Drawer = styled(MuiDrawer, {
 
 export default function MiniDrawer() {
     const theme = useTheme();
-    const [open, setOpen] = React.useState(true);
+    // const [open, setOpen] = React.useState(true);
     const navigate = useNavigate();
+    const open = useAppStore((state) => state.dopen)
     
 
     return (
         <Box sx={{ display: "flex" }}>
             <CssBaseline />
-           
+            <Box height={30}/>
+
             <Drawer variant="permanent" open={open}>
                 <DrawerHeader>
-                    <IconButton onClick={()=>setOpen(!open)}>
+                    <IconButton>
                         {theme.direction === "rtl" ? (
                             <ChevronRightIcon />
                         ) : (
